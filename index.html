@@ -2,26 +2,29 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Handyman Estimates Admin Viewer</title>
-  <link rel="stylesheet" href="styles.css" />
-  <!-- Firebase CDN -->
-  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-firestore-compat.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Handyman Admin Viewer</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-firestore-compat.js"></script>
 </head>
 <body>
-  <div id="app">
-    <h1>Handyman Estimates Admin Viewer</h1>
+  <header>
+    <h1>📋 Handyman Quotes Admin</h1>
+  </header>
 
-    <div id="controls">
-      <input type="search" id="searchInput" placeholder="Search quotes..." />
-      <button id="exportCsvBtn">Export Visible to CSV</button>
-    </div>
+  <section id="filters">
+    <input type="text" id="search-name" placeholder="Search by name" />
+    <input type="number" id="min-price" placeholder="Min price" />
+    <input type="number" id="max-price" placeholder="Max price" />
+    <button onclick="applyFilters()">Apply Filters</button>
+    <button onclick="exportToCSV()">Export to CSV</button>
+  </section>
 
-    <div id="quotesContainer"></div>
-  </div>
+  <section id="quotes-container">
+    <!-- Quote cards will go here -->
+  </section>
 
-  <script src="firebase-config.js"></script>
-  <script src="app.js"></script>
+  <script src="admin.js"></script>
 </body>
 </html>
