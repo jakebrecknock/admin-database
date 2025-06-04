@@ -1,49 +1,89 @@
-
-* {
-  box-sizing: border-box;
-}
 body {
   font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  display: flex;
+  margin: 0; padding: 0;
+  background: #F2E1E1;
+  color: black;
   min-height: 100vh;
-  background-color: #fdfdfd;
-}
-#sidebar {
-  width: 250px;
-  background-color: #F2E1E1;
-  padding: 20px;
-  box-shadow: 2px 0 5px rgba(0,0,0,0.1);
-}
-#main {
-  flex: 1;
-  padding: 20px;
-  overflow-y: auto;
-}
-#quote-list {
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  align-items: center;
+  padding: 20px;
 }
-.quote-card {
-  background: #AF4C4C;
-  color: black;
-  padding: 15px;
-  border-radius: 6px;
-  border: 1px solid #333;
+
+#app {
+  width: 100%;
+  max-width: 900px;
 }
-button {
-  margin-top: 10px;
-  padding: 8px 12px;
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #AF4C4C;
+}
+
+#controls {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+#searchInput {
+  flex-grow: 1;
+  padding: 8px;
+  font-size: 1rem;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+#exportCsvBtn {
   background-color: #ed3b4b;
   color: white;
   border: none;
   border-radius: 4px;
+  padding: 8px 16px;
   cursor: pointer;
 }
-input[type="text"] {
+
+#exportCsvBtn:hover {
+  background-color: #bf2e3b;
+}
+
+.quote-card {
+  background-color: #AF4C4C;
+  color: black;
+  border-radius: 6px;
+  padding: 15px;
+  margin-bottom: 15px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.quote-card div {
+  margin: 5px 0;
+}
+
+.quote-card button {
+  margin-right: 10px;
+  background-color: #ed3b4b;
+  border: none;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.quote-card button:hover {
+  background-color: #bf2e3b;
+}
+
+.edit-form label {
+  display: block;
+  margin: 6px 0;
+}
+
+.edit-form input {
   width: 100%;
-  padding: 8px;
-  margin-bottom: 10px;
+  padding: 6px;
+  font-size: 1rem;
+  border-radius: 4px;
+  border: 1px solid #ddd;
 }
